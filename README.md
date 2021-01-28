@@ -6,6 +6,12 @@ setup
 $ poetry install
 ```
 
+train
+
+```
+$ poetry run python train.py
+```
+
 start webapp
 
 ```
