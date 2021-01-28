@@ -5,17 +5,11 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 def train():
-    data, target = load_penguins(
-        return_X_y=True, drop_na=True
-    )
+    data, target = load_penguins(return_X_y=True, drop_na=True)
 
     models = {
-        "rf": RandomForestClassifier(
-            max_depth=3, random_state=0
-        ),
-        "dt": DecisionTreeClassifier(
-            max_depth=3, random_state=0
-        ),
+        "rf": RandomForestClassifier(max_depth=3, random_state=0),
+        "dt": DecisionTreeClassifier(max_depth=3, random_state=0),
     }
 
     for name, model in models.items():

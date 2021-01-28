@@ -22,9 +22,7 @@ class PenguinItem(BaseModel):
     bill_length: float = Field(..., example=39.1)
     bill_depth: float = Field(..., example=18.7)
     flipper_length: float = Field(..., example=181.0)
-    body_mass: float = Field(
-        ..., gt=1000, lt=10000, example=3750.0
-    )
+    body_mass: float = Field(..., gt=1000, lt=10000, example=3750.0)
 
 
 class PenguinPrediction(BaseModel):
@@ -34,9 +32,7 @@ class PenguinPrediction(BaseModel):
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse(
-        "index.html", context={"request": request}
-    )
+    return templates.TemplateResponse("index.html", context={"request": request})
 
 
 @app.post("/predict", response_model=PenguinPrediction)
@@ -51,9 +47,7 @@ async def predict_species(data: PenguinItem):
     ]
     return {
         "name": models[data.model].predict(x)[0],
-        "probability": models[data.model]
-        .predict_proba(x)
-        .max(),
+        "probability": models[data.model].predict_proba(x).max(),
     }
 
 
