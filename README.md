@@ -1,5 +1,13 @@
 # FastAPI example
 
+## docker way
+
+```
+$ docker-compose up
+```
+
+## development
+
 setup
 
 ```
@@ -17,7 +25,7 @@ start webapp
 
 ```
 $ cd app
-$ poetry run uvicorn app:app --reload
+$ poetry run uvicorn main:app --reload
 ```
 
 run tests
