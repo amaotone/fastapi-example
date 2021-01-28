@@ -9,12 +9,14 @@ $ poetry install
 train
 
 ```
+$ cd app
 $ poetry run python train.py
 ```
 
 start webapp
 
 ```
+$ cd app
 $ poetry run uvicorn app:app --reload
 ```
 

@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 from palmerpenguins import load_penguins
 
-from app import app
+from main import app
 
 client = TestClient(app)
 models = ["randomforest", "decisiontree"]
