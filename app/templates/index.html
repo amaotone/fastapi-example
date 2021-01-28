@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>FastAPI Example</title>
+</head>
+
+<body>
+    <h1>FastAPI Example</h1>
+    <p>request header</p>
+    <ul>
+        {% for key, value in request.headers.items() %}
+        <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

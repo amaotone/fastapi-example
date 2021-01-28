@@ -1,11 +1,13 @@
 import joblib
-from fastapi import BackgroundTasks, FastAPI
+from fastapi import BackgroundTasks, FastAPI, Request
 from pydantic import BaseModel, Field
 from typing_extensions import Literal
-
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 from train import train
 
 app = FastAPI()
+templates = Jinja2Templates(directory="templates")
 models = {
     "randomforest": joblib.load("model/rf.pkl"),
     "decisiontree": joblib.load("model/dt.pkl"),
@@ -27,6 +29,13 @@ class PenguinItem(BaseModel):
 class PenguinPrediction(BaseModel):
     name: str
     probability: float
+
+
+@app.get("/", response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse(
+        "index.html", context={"request": request}
+    )
 
 
 @app.post("/predict", response_model=PenguinPrediction)
