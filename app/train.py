@@ -1,8 +1,7 @@
-from pydantic import main
+import joblib
+from palmerpenguins import load_penguins
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
-from palmerpenguins import load_penguins
-import joblib
 
 
 def train():

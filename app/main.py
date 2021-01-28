@@ -1,9 +1,10 @@
 import joblib
 from fastapi import BackgroundTasks, FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from typing_extensions import Literal
-from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+
 from train import train
 
 app = FastAPI()
