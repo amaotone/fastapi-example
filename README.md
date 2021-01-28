@@ -31,5 +31,6 @@ $ poetry run uvicorn main:app --reload
 run tests
 
 ```
+$ cd app
 $ poetry run pytest
 ```
