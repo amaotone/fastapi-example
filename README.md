@@ -1,5 +1,7 @@
 # FastAPI example
 
+This is an example of creating a simple ML application with FastAPI.
+
 ## docker way
 
 ```
@@ -37,5 +39,10 @@ $ poetry run pytest
 
 ## links
 
-- [発表スライド：さよならFlask ようこそFastAPI](https://speakerdeck.com/amaotone/goodbye-flask-welcome-fastapi)
-- [FastAPI document](https://fastapi.tiangolo.com/ja/)
+- Slide
+  - [さよならFlask ようこそFastAPI](https://speakerdeck.com/amaotone/goodbye-flask-welcome-fastapi)
+- Framework
+  - [FastAPI](https://fastapi.tiangolo.com/ja/)
+  - [Pydantic](https://pydantic-docs.helpmanual.io/)
+- Dataset
+  - [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/)
