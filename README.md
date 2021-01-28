@@ -34,3 +34,8 @@ run tests
 $ cd app
 $ poetry run pytest
 ```
+
+## links
+
+- [発表スライド：さよならFlask ようこそFastAPI](https://speakerdeck.com/amaotone/goodbye-flask-welcome-fastapi)
+- [FastAPI document](https://fastapi.tiangolo.com/ja/)
